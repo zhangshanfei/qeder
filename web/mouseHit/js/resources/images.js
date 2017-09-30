@@ -3,28 +3,28 @@
  */
 function getImageRes() {
     return [{
-        id : 'hammer',
-        src : 'images/hammer.png'
+        id:"hammer",
+        src:"../../mouseHit/images/hammer.png"
     },{
 		id:"bg_hole",
-		src:"images/bg_canvas.png"
+		src:"../../mouseHit/images/bg_canvas.png"
 	},{
 		id:"bg_holeHide",
-		src:"images/bg_hole.png"
+		src:"../../mouseHit/images/bg_hole.png"
 	},{
 		id:"mouse",
-		src:"images/mouse.png"
+		src:"../../mouseHit/images/mouse.png"
 	},{
 		id:"help",
-		src:"images/help.png"
+		src:"../../mouseHit/images/help.png"
 	},{
 		id:"star",
-		src:"images/star.png"
+		src:"../../mouseHit/images/star.png"
 	},{
 		id:"icon",
-		src:"images/icon.png"
+		src:"../../mouseHit/images/icon.png"
 	},{
 	    id:"time_roller",
-		src:"images/time_roller.png"
+		src:"../../mouseHit/images/time_roller.png"
 	}];
 }

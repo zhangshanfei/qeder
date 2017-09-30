@@ -77,11 +77,10 @@ class InformationController extends BaseController
 	}
 
 	//张善飞 code QQ3460698227
+	//返回打地鼠的游戏视图
 	public function actionMousehit()
 	{
-		$htmlstr = file_get_contents(\Yii::$app->homeUrl.'mouseHit/mouseHit.html');
-		$htmldecode = htmlspecialchars_decode($htmlstr);
-		return  $htmldecode;
+		return $this->render('mousehit');
 	}
 
 }

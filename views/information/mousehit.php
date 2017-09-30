@@ -2,29 +2,29 @@
 
 $this->title = "MouseHit Game —— Qedertek";
 
-$this->registerCssFile(\Yii::$app->homeUrl.'mousehit/css/main2.css'        );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/myEngine/core/my.js'  );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/myEngine/component/Component.js'    );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/myEngine/component/DisplayObject.js');
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/myEngine/component/Bitmap.js'       );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/myEngine/utils/ImageManager.js'     );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/myEngine/utils/DOM.js'   );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/myEngine/utils/Math.js'  );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/myEngine/utils/buzz.js'  );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/js/resources/images.js'  );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/js/resources/audios.js'  );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/js/frames/mouse.js'      );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/js/frames/star.js'       );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/js/frames/score.js'      );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/js/classes/Audio.js'     );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/js/classes/Animation.js' );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/js/classes/star.js'	     );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/js/classes/score.js'     );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/js/classes/hammer.js'    );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/js/classes/mouse.js'     );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/js/classes/MouseHit.js'  );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/js/classes/UI.js'        );
-$this->registerJsFile(\Yii::$app->homeUrl.'mousehit/js/main.js'              );
+$this->registerCssFile(\Yii::$app->homeUrl.'mouseHit/css/main.css'        );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/myEngine/core/my.js'  );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/myEngine/component/Component.js'    );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/myEngine/component/DisplayObject.js');
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/myEngine/component/Bitmap.js'       );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/myEngine/utils/ImageManager.js'     );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/myEngine/utils/DOM.js'   );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/myEngine/utils/Math.js'  );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/myEngine/utils/buzz.js'  );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/resources/images.js'  );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/resources/audios.js'  );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/frames/mouse.js'      );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/frames/star.js'       );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/frames/score.js'      );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/classes/Audio.js'     );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/classes/Animation.js' );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/classes/star.js'	     );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/classes/score.js'     );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/classes/hammer.js'    );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/classes/mouse.js'     );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/classes/MouseHit.js'  );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/classes/UI.js'        );
+$this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/main.js'              );
 ?>
 		
 
@@ -46,8 +46,8 @@ $this->registerJsFile(\Yii::$app->homeUrl.'mousehit/js/main.js'              );
 			</div>	
 			<!-- 帮助界面 -->
 			<div id="HelpDiv" >
-			  <!-- 帮助图片 -->
-			  <img src="images/help.png"/>  
+			  <!-- 帮助图片   张善飞  -->
+			  <img src="<?php echo \Yii::$app->homeUrl?>mouseHit/images/help.png"/>  
 			  
 			  <a href="javascript:void(0)" id="btnBack" class="icon">&nbsp;</a>
 			</div>

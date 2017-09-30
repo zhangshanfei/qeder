@@ -1,0 +1,8 @@
+{
+	"query": {
+		"multi_match": {
+			"query": "Chuzzle",
+			"fields": ["title","descr"]
+		}
+	}
+}

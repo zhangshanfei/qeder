@@ -1,0 +1,12 @@
+options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule . index.php
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(qedertek\.com)(:80)? [NC]
+RewriteRule ^(.*) http://www.qedertek.com/$1 [R=301,L]

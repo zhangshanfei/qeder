@@ -6,6 +6,8 @@ use app\models\Product;
 use app\models\Influencer;
 use yii\helpers\Url;
 
+//$db = require('/config/db.php');
+
 class InformationController extends BaseController
 {
 	protected $except = ['about','promotion','support','giveaway','sale','deals','influencer','captcha','activity'];
@@ -76,11 +78,12 @@ class InformationController extends BaseController
 		return $this->render('influencer',['model' => $model,'country' => $country]);
 	}
 
-	//张善飞 code QQ3460698227
+	//developer 张善飞 code QQ3460698227
 	//返回打地鼠的游戏视图
 	public function actionMousehit()
 	{
 		return $this->render('mousehit');
 	}
+	//developer 张善飞 code QQ3460698227	保存游戏得分到数据库		
 
 }

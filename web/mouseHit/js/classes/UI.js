@@ -95,7 +95,7 @@
     UI.prototype.__initBtnRetry = function() {
         var btnRetry = my.DOM.get('btnRetry'), self = this;
         btnRetry.onclick = function() {
-            //张善飞 阻止重新开始 self.onretry();
+            //张善飞   阻止重新开始 self.onretry();
         }
     }
         

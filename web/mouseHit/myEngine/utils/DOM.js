@@ -12,6 +12,14 @@
             return document.getElementById(id);
         },
         /**
+         * 张善飞增加
+         * 根据id获取元素
+         * @param {String} id
+         */
+        getinnerbyclass : function(classname) {
+            return document.getElementsByClassName(classname)[0].firstChild.innerHTML;            
+        },
+        /**
          * 获取元素的CSS样式值
          * @param {DOM Object} element
          * @param {String} name

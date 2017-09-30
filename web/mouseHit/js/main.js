@@ -7,7 +7,7 @@
      * 加载图片资源
      */
     function loadImageResources(number) {
-        my.DOM.get('progressText').innerHTML = '正在加载图片...(' + ~~(number / imageResources.length * 100) + '%)';
+        my.DOM.get('progressText').innerHTML = 'Loading images...(' + ~~(number / imageResources.length * 100) + '%)';
         if(number < imageResources.length) {
             return false;
         }
@@ -43,7 +43,7 @@
         var number = 1;
 
         buzzGroup.bind('loadeddata', function(e) {
-            my.DOM.get('progressText').innerHTML = '正在加载音乐...(' + ~~(number / len * 100) + '%)';
+            my.DOM.get('progressText').innerHTML = 'Loading sounds...(' + ~~(number / len * 100) + '%)';
 
             if(number >= len) {
                 my.DOM.remove(my.DOM.get('progressText'));

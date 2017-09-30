@@ -264,7 +264,7 @@
 	*/
 	MouseHit.prototype.__checkIsPass = function(self){
 	
-	    if(self.timeCaculator>2100){             //关卡时间到
+	    if(self.timeCaculator>2800){             //关卡时间到
 		    clearInterval(self.drawCanvasInterval);//不再
 			clearInterval(self.drawMouseInterval);//不再随机产生地鼠
 		    self.timeCaculator=0;
@@ -283,8 +283,18 @@
 				self.dijiguan=1;
 				*/
 				self.ui.toOver();//失败 结束游戏界面
-				my.DOM.get('score').innerHTML="你的得分："+~~self.ui.score;
-				//开发者：张善飞qq3460698227
+				my.DOM.get('score').innerHTML="Your score："+~~self.ui.score;
+				//--- developer：张善飞qq3460698227	
+				var url = '../../savescore.php';					//设置处理路径	
+				var uem = my.DOM.getinnerbyclass('user_text');
+				var uscore = ~~self.ui.score ;
+				var data = uem+","+uscore ;
+				
+				request = new XMLHttpRequest();
+				request.open("POST",url);
+				request.setRequestHeader("Content-Type","text/plain;charset=UTF-8");
+				request.send(data);				
+				//--- 
 				
 				self.ui.score=0;
 				Audio.play('over_music');

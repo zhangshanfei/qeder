@@ -29,7 +29,7 @@ $this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/main.js'              );
 		
 
    
-		
+<div class="main support" id="main">		
 		<div id="hitmouse">
 			<!-- 预备界面 -->
 			<div id="gameCover" class="block background">
@@ -82,6 +82,6 @@ $this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/main.js'              );
 				<a href="javascript:void(0)" id="btnBackToMenu" class="icon">&nbsp;</a>			
 			</div>
 		</div>
-
+</div>
 
 					

@@ -80,7 +80,7 @@ AppAsset::register($this);
 		<ul class="dropdown-menu">
 			<li><a href="<?php echo Url::to(['information/influencer'])?>">Community</a></li>
 			<li><a href="<?php echo Url::to(['information/giveaway'])?>">Giveaway</a></li>
-			<li><a href="<?php echo Url::to(['information/mousehit'])?>">A little game</a></li>
+			<li><a href="<?php echo Url::to(['information/mousehit'])?>" title="Please login first,then you can play.">A little game</a></li>
 		</ul>
 	</li>
         <li> <a href="<?php echo Url::to(['information/support'])?>">SUPPORT</a></li>

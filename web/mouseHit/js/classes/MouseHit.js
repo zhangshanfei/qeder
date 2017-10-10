@@ -264,7 +264,7 @@
 	*/
 	MouseHit.prototype.__checkIsPass = function(self){
 	
-	    if(self.timeCaculator>2800){             //关卡时间到
+	    if(self.timeCaculator>2000){             //关卡时间到
 		    clearInterval(self.drawCanvasInterval);//不再
 			clearInterval(self.drawMouseInterval);//不再随机产生地鼠
 		    self.timeCaculator=0;
@@ -288,12 +288,13 @@
 				var url = '../../savescore.php';					//设置处理路径	
 				var uem = my.DOM.getinnerbyclass('user_text');
 				var uscore = ~~self.ui.score ;
-				var data = uem+","+uscore ;
+				var data = uem+"&"+uscore ;
 				
-				request = new XMLHttpRequest();
+				var request = new XMLHttpRequest();
 				request.open("POST",url);
-				request.setRequestHeader("Content-Type","text/plain;charset=UTF-8");
-				request.send(data);				
+				request.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
+				request.send(data);
+								
 				//--- 
 				
 				self.ui.score=0;

@@ -27,8 +27,7 @@ $this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/classes/UI.js'        );
 $this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/main.js'              );
 ?>
 		
-
-   
+		
 <div class="main support" id="main">		
 		<div id="hitmouse">
 			<!-- 预备界面 -->

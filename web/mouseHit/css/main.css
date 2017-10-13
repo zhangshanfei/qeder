@@ -31,7 +31,7 @@ a, a:hover {
  */
 #hitmouse{
 	position:relative;
-	margin:40px auto;
+	margin:0px auto;	
 	width:750px;
 	height:550px;
 }

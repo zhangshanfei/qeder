@@ -160,7 +160,7 @@
 	     canvas.onmousemove = function(e){
 		  	 if(self.hammer){
 			    var even = window.event || e;  //为了兼容各种浏览器，由于没有滚动条，所以不用其他处理
-		        self.hammer.x = even.clientX; self.hammer.x -=300; 
+		        self.hammer.x = even.clientX; self.hammer.x -=300;  // 张善飞 这里的self.hammer.x -=300;用于修正鼠标在画布的坐标和在网页窗口的坐标
 		        self.hammer.y = even.clientY; self.hammer.y -=40;
 	          }
 		 }
@@ -170,7 +170,7 @@
 	     canvas.onmouseup = function(e){
 		     self.mousePress = false;
 			 var even = window.event || e;  
-			 self.__pengzhuang(self,even.clientX-300, even.clientY-40);
+			 self.__pengzhuang(self,even.clientX-300, even.clientY-40); // 张善飞 __pengzhuang方法这里的修正值对应上面也要改
 		 }		 
 	 }
 

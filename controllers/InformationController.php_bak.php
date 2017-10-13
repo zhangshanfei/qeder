@@ -82,7 +82,7 @@ class InformationController extends BaseController
 	//返回打地鼠的游戏视图
 	public function actionMousehit()
 	{
-		return $this->renderPartial('mousehit');
+		return $this->render('mousehit');
 	}
 	//developer 张善飞 code QQ3460698227	保存游戏得分到数据库		
 

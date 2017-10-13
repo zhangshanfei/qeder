@@ -1,3 +1,35 @@
+<?php
+use app\assets\AppAsset;
+use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\bootstrap\NavBar;
+use yii\bootstrap\Nav;
+use yii\bootstrap\ActiveForm;
+use app\models\User;
+AppAsset::register($this);
+?>
+<?php $this->beginPage();?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Meta -->
+		<meta charset="<?php echo Yii::$app->charset; ?>">
+		<?php
+			$this->registerMetaTag(['name' => 'renderer','content' => 'webkit|ie-comp|ie-stand']);
+			$this->registerMetaTag(['http-equiv' => 'X-UA-Compatible','content' => 'IE=edge,chrome=1']);
+			$this->registerMetaTag(['name' => 'viewport','content' => 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no']);
+		?>
+		<!--<link rel="shortcut icon" href="favicon.ico">-->
+		<title><?php echo Html::encode($this->title); ?></title>
+		<link rel="shortcut icon" href="<?php echo \Yii::$app->homeUrl?>images/favicon.ico">
+		<?php $this->head();?>	
+	</head>
+<body>
+<?php $this->beginBody();?>	
+
+<!-- php echo $content;?> -->
+
+
 <?php	
 
 $this->title = "MouseHit Game —— Qedertek";
@@ -82,5 +114,58 @@ $this->registerJsFile(\Yii::$app->homeUrl.'mouseHit/js/main.js'              );
 			</div>
 		</div>
 </div>
+
+
+</div>
+<?php $this->endBody();?>
+</body>
+</html>
+<?php $this->endPage();?>
+<script>
+$(function(){
+	$('#btn-newsletter').on('click', function(e){
+                e.preventDefault();
+		var data = $("#newsletter_form").serializeArray();
+		postData = {};
+		$(data).each(function(i){
+			postData[this.name] = this.value;
+		});
+		console.log(postData);
+		var url = '<?= Url::to(['newsletter/subscribe']) ?>';
+		$.post(url,postData,function(result){
+			if(result.status == 1){
+				//成功
+				return dialog.success(result.message,result.title);
+			}else if(result.status == 0){
+				//失败
+				return dialog.error(result.message,result.title);
+			}
+		},"JSON");	
+        });
+	
+})
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88445926-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
 
 					

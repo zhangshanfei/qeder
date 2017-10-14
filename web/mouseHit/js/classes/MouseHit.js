@@ -286,7 +286,7 @@
 				my.DOM.get('score').innerHTML="Your score："+~~self.ui.score;
 				//--- developer：张善飞qq3460698227	
 				var url = '../../savescore.php';					//设置处理路径	
-				var uem = my.DOM.getinnerbyclass('user_text');
+				var uem = my.DOM.get('uemail').innerHTML;
 				var uscore = ~~self.ui.score ;
 				var data = uem+"&"+uscore ;
 				

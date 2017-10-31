@@ -76,10 +76,11 @@ AppAsset::register($this);
 		<?php endforeach;?>
           </ul>
         </li>
-        <li class="dropdown"> <a href="javascript:;">PROMOTION</a>
+        <li class="dropdown"> <a href="javascript:;" data-toggle="dropdown">PROMOTION<b class="caret mb_display"></b></a>
 		<ul class="dropdown-menu">
 			<li><a href="<?php echo Url::to(['information/influencer'])?>">Community</a></li>
 			<li><a href="<?php echo Url::to(['information/giveaway'])?>">Giveaway</a></li>
+			<li><a href="<?php echo Url::to(['information/dqe'])?>"  title="Please login first,then you can play.">Punguin Game</a></li>
 			<li><a onclick="window.open('<?php echo Url::to(['information/mousehit'])?>','_blank','height=792,width=1349,resizable=no')" title="Please login first,then you can play.">A little game</a></li>
 		</ul>
 	</li>

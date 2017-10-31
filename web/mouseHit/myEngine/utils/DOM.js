@@ -13,7 +13,7 @@
         },
         /**
          * 张善飞增加
-         * 
+         * 根据id获取元素
          * @param {String} id
          */
         getinnerbyclass : function(classname) {

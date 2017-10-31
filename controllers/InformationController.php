@@ -84,10 +84,6 @@ class InformationController extends BaseController
 	{
 		return $this->renderPartial('mousehit');
 	}
-	//developer 张善飞 code QQ3460698227
-	public function actionDqe()
-	{
-		return $this->renderPartial("dqe");
-	}
+	//developer 张善飞 code QQ3460698227	保存游戏得分到数据库		
 
 }

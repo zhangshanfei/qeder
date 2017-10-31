@@ -27,6 +27,8 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody();?>	
 
+<span class="userText_box" ><a id="uemail" href="<?= Url::to(['account/'])?>"><?php echo !empty(Yii::$app->session['username']) ? Yii::$app->session['username'] : Yii::$app->user->identity->useremail ?></a></span><!--4-1新增-->
+
 <!-- php echo $content;?> -->
 
 

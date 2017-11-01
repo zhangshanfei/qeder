@@ -2,6 +2,11 @@
 /* developer 张善飞 QQ3460698227
 *
 */
+$now = new DateTime();
+$deadline = new DateTime();		
+$deadline->setDate("2017", "11", "30");  // 设置截止日期
+$deadline->setTime(0,0,0);	// 设置截止日期的时间，时、分、秒
+if($now<$deadline){
 $postStr = file_get_contents("php://input");
 
 $Uemail = explode('&',$postStr)[0];
@@ -14,5 +19,4 @@ $sqlstr = "drop procedure if exists ins_sc;  create procedure ins_sc()  begin SE
 $result = $mysqli->multi_query($sqlstr);
 $mysqli->autocommit(TRUE);
 $mysqli->close();
-
-
+}
